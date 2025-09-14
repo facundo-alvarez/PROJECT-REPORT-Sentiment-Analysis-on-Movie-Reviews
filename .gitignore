@@ -215,7 +215,7 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-/.vector_cache
+.vector_cache
 /data
 
 *.pt
