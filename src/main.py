@@ -1,5 +1,4 @@
 import torch
-import os
 import csv
 import spacy
 import re
@@ -114,9 +113,8 @@ for epoch in range(epochs):
         optimizer.step()
 
         running_loss += loss.item()
-        if i % 100 == 99:  
-            print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / (i+1):.3f}')
-            running_loss = 0.0
+        print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / (i+1):.3f}')
+        running_loss = 0.0
 
     model.eval()
     val_loss = 0.0
